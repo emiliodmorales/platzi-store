@@ -1,3 +1,10 @@
+.product-page h2 {
+  position: sticky;
+  top: 5rem;
+  background-color: white;
+  padding: 1rem;
+}
+
 .product-page ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
@@ -11,9 +18,16 @@
   border: 1px solid black;
   border-radius: 5px;
 
+  overflow-y: clip;
+
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+.product-page li a {
+  text-decoration: none;
+  color: black;
 }
 
 .product-page li img {

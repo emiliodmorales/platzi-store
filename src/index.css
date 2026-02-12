@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+#root {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+}
+
 header {
+  background-color: white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 main {
