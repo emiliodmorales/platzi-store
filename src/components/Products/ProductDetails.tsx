@@ -39,7 +39,7 @@ export default function ProductDetails() {
       <h3>Related Products</h3>
       <ul>
         {relatedProducts.map((relatedProduct) => (
-          <li>
+          <li key={relatedProduct.id}>
             <Link to={"/products/" + relatedProduct.slug}>
               {relatedProduct.title}
             </Link>
