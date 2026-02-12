@@ -26,3 +26,15 @@ export async function getProductDetails(productSlug: string,) {
     return null;
   }
 }
+
+/** Retrieve related products from the API */
+export async function getRelatedProducts(productSlug: string,) {
+  try {
+    const response = await fetch(ENDPOINT + "/slug/" + productSlug+"/related");
+    const result: Product[] = await response.json();
+    return result;
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
+}
