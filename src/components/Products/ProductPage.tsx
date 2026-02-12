@@ -3,7 +3,7 @@ import type { Product } from "../../types/product";
 import { getProducts } from "../../api/products";
 import ProductListItem from "./ProductListItem";
 
-export default function ProductList() {
+export default function ProductPage() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
