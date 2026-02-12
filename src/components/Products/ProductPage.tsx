@@ -16,13 +16,13 @@ export default function ProductPage() {
   }, []);
 
   return (
-    <>
+    <section className="product-page">
       <h2>Products</h2>
       <ul>
         {products.map((product) => (
           <ProductListItem key={product.id} product={product} />
         ))}
       </ul>
-    </>
+    </section>
   );
 }
