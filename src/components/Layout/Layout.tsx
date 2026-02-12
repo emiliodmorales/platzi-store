@@ -10,10 +10,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h1>Platzi Store</h1>
         <nav>
           <NavLink to="/products">Products</NavLink>
-          {token === null ? (
-            <NavLink to="/login">Login</NavLink>
+          {token ? (
+            <>
+              <NavLink to="/account">Account</NavLink>
+              <button onClick={logout}>Logout</button>
+            </>
           ) : (
-            <button onClick={logout}>Logout</button>
+            <NavLink to="/login">Login</NavLink>
           )}
         </nav>
       </header>

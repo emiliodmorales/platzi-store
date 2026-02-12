@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import ProductPage from "../Products/ProductPage";
 import ProductDetails from "../Products/ProductDetails";
 import Login from "../Auth/Login";
+import Account from "../Auth/Account";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       </Route>
 
       <Route path="/login" element={<Login />} />
+      <Route path="/account" element={<Account />} />
     </Routes>
   );
 }
