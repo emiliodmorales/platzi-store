@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import type { Product } from "../../types/product";
 import { getProducts } from "../../api/products";
 
@@ -26,5 +27,9 @@ export default function Products() {
 }
 
 function ProductItem({ product }: { product: Product }) {
-  return <li>{product.title}</li>;
+  return (
+    <li>
+      <Link to={"/products/" + product.id}>{product.title}</Link>
+    </li>
+  );
 }

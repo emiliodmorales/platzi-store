@@ -14,3 +14,15 @@ export async function getProducts() {
     return [];
   }
 }
+
+/** Retrieve product details from the API */
+export async function getProductDetails(productId: number) {
+  try {
+    const response = await fetch(ENDPOINT + "/" + productId);
+    const result: Product = await response.json();
+    return result;
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
+}
