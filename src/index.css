@@ -32,3 +32,10 @@ nav {
 p[role="alert"] {
   color: red;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  width: fit-content;
+}

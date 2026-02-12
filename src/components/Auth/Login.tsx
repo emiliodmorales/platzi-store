@@ -21,13 +21,13 @@ export default function Login() {
   }
 
   return (
-    <form action={tryLogin}>
+    <form className="login" action={tryLogin}>
       <label>
-        Email
+        <p>Email</p>
         <input type="text" name="email" />
       </label>
       <label>
-        Password
+        <p>Password</p>
         <input type="password" name="password" />
       </label>
       <button>Login</button>
