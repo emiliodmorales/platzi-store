@@ -8,7 +8,7 @@ export default function App() {
       <Route index element={<Products />} />
       <Route path="/products">
         <Route index element={<Products />} />
-        <Route path=":productId" element={<ProductDetails />} />
+        <Route path=":productSlug" element={<ProductDetails />} />
       </Route>
     </Routes>
   );

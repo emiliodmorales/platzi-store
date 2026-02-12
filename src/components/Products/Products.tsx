@@ -29,7 +29,7 @@ export default function Products() {
 function ProductItem({ product }: { product: Product }) {
   return (
     <li>
-      <Link to={"/products/" + product.id}>{product.title}</Link>
+      <Link to={"/products/" + product.slug}>{product.title}</Link>
     </li>
   );
 }
