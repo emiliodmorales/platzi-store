@@ -28,3 +28,7 @@ nav {
   flex-flow: row wrap;
   gap: 1ch;
 }
+
+p[role="alert"] {
+  color: red;
+}
