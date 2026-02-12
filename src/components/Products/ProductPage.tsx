@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Product } from "../../types/product";
 import { getProducts } from "../../api/products";
 import ProductListItem from "./ProductListItem";
+import "./products.css";
 
 export default function ProductPage() {
   const [products, setProducts] = useState<Product[]>([]);
