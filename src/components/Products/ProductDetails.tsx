@@ -36,16 +36,20 @@ export default function ProductDetails() {
       <h2>{product.title}</h2>
       <p>${product.price}</p>
       <p>{product.description}</p>
-      <h3>Related Products</h3>
-      <ul>
-        {relatedProducts.map((relatedProduct) => (
-          <li key={relatedProduct.id}>
-            <Link to={"/products/" + relatedProduct.slug} reloadDocument>
-              {relatedProduct.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {relatedProducts.length > 0 && (
+        <>
+          <h3>Related Products</h3>
+          <ul>
+            {relatedProducts.map((relatedProduct) => (
+              <li key={relatedProduct.id}>
+                <Link to={"/products/" + relatedProduct.slug} reloadDocument>
+                  {relatedProduct.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </>
   );
 }
