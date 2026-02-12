@@ -5,7 +5,7 @@ import ProductListItem from "./ProductListItem";
 import "./products.css";
 
 export default function ProductPage() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[] | null>(null);
 
   useEffect(() => {
     const trySetProducts = async () => {
@@ -14,6 +14,8 @@ export default function ProductPage() {
     };
     trySetProducts();
   }, []);
+
+  if (!products) return <>Loading...</>;
 
   return (
     <section className="product-page">
