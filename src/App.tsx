@@ -1,5 +1,10 @@
+import { Route, Routes } from "react-router";
+import Products from "./Products";
+
 export default function App() {
   return (
-    <h1>Platzi Store</h1>
-  )
+    <Routes>
+      <Route index element={<Products />} />
+    </Routes>
+  );
 }
