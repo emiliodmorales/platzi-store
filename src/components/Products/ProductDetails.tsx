@@ -40,7 +40,7 @@ export default function ProductDetails() {
       <ul>
         {relatedProducts.map((relatedProduct) => (
           <li key={relatedProduct.id}>
-            <Link to={"/products/" + relatedProduct.slug}>
+            <Link to={"/products/" + relatedProduct.slug} reloadDocument>
               {relatedProduct.title}
             </Link>
           </li>
