@@ -12,6 +12,9 @@ export default function ProductListItem({ product }: { product: Product }) {
             src={product.images[0]}
           />
         )}
+        <p>
+          <b>${product.price}</b>
+        </p>
         <p>{product.title}</p>
       </Link>
     </li>
