@@ -24,11 +24,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       },
       body: JSON.stringify(credentials),
     });
-    const result: { access_token: string; refresh_token: string } =
-      await response.json();
+    const result = await response.json();
 
     if (!response.ok) {
-      throw Error("Unknown login error occured");
+      throw Error(result.message);
     }
 
     setToken(result.access_token);
