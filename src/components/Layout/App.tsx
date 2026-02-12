@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router";
-import Products from "../Products/Products";
+import ProductList from "../Products/ProductList";
 import ProductDetails from "../Products/ProductDetails";
 
 export default function App() {
   return (
     <Routes>
-      <Route index element={<Products />} />
+      <Route index element={<ProductList />} />
       <Route path="/products">
-        <Route index element={<Products />} />
+        <Route index element={<ProductList />} />
         <Route path=":productSlug" element={<ProductDetails />} />
       </Route>
     </Routes>
