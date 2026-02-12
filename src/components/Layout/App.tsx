@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
 import ProductPage from "../Products/ProductPage";
 import ProductDetails from "../Products/ProductDetails";
+import Login from "../Auth/Login";
 
 export default function App() {
   return (
@@ -10,6 +11,8 @@ export default function App() {
         <Route index element={<ProductPage />} />
         <Route path=":productSlug" element={<ProductDetails />} />
       </Route>
+
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }

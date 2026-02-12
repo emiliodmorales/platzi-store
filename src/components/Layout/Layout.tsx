@@ -7,6 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h1>Platzi Store</h1>
         <nav>
           <NavLink to="/products">Products</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </nav>
       </header>
       <main>{children}</main>
