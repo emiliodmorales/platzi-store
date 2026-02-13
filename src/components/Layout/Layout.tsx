@@ -16,7 +16,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <button onClick={logout}>Logout</button>
             </>
           ) : (
-            <NavLink to="/login">Login</NavLink>
+            <>
+              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/register">Register</NavLink>
+            </>
           )}
         </nav>
       </header>

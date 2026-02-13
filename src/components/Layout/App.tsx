@@ -3,6 +3,7 @@ import ProductPage from "../Products/ProductPage";
 import ProductDetails from "../Products/ProductDetails";
 import Login from "../Auth/Login";
 import Account from "../Auth/Account";
+import Register from "../Auth/Register";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       </Route>
 
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/account" element={<Account />} />
     </Routes>
   );
